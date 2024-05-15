@@ -23,10 +23,10 @@
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
+
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-
     <activity
       android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
       android:exported="true">
@@ -38,10 +38,9 @@
         <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
         <data
           android:host="oauth"
-          android:scheme="kakao3d674785aa3f4a9878cbe3dfa0e58708" />
+          android:scheme="kakaob5afe2976e5d379df19450e9f7eb7940" />
       </intent-filter>
     </activity>
-
   </application>
 
 </manifest>
