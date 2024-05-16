@@ -1,6 +1,7 @@
 package com.my.vitamateapp
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -26,7 +27,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+
     private fun loginWithKakao(){
+
+        // 토큰 정보 보기, 토큰 정보 있으면 로그인 없이 HOME화면으로 바로가기
+        UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
+            if (error != null) {
+                Log.e(TAG, "토큰 정보 보기 실패", error)
+            }
+            else if (tokenInfo != null) {
+                Log.i(TAG, "토큰 정보 보기 성공")
+                gotoHome()
+            }
+        }
+
+
+
         // 카카오계정으로 로그인 공통 callback 구성
         // 카카오톡으로 로그인 할 수 없어 카카오계정으로 로그인할 경우 사용됨
         val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
@@ -34,6 +51,7 @@ class MainActivity : AppCompatActivity() {
                 Log.e(TAG, "카카오계정으로 로그인 실패", error)
             } else if (token != null) {
                 Log.i(TAG, "카카오계정으로 로그인 성공 ${token.accessToken}")
+                gotoHome()//Home화면으로 이동
 
             }
         }
@@ -55,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                     UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
                 } else if (token != null) {
                     Log.i(TAG, "카카오톡으로 로그인 성공 ${token.accessToken}")
-
+                    gotoHome()//Home화면으로 이동
                 }
             }
         } else {
@@ -63,6 +81,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun gotoHome() {
+        startActivity(Intent(this, HomeActivity::class.java))
+        finish() // 현재 액티비티 종료.. HOME화면으로
+    }
 
 
 }
