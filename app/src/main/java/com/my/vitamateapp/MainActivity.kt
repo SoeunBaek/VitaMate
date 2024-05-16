@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 Log.e(TAG, "카카오계정으로 로그인 실패", error)
             } else if (token != null) {
                 Log.i(TAG, "카카오계정으로 로그인 성공 ${token.accessToken}")
-                gotoHome()//Home화면으로 이동
+                gotoRegister()//Home화면으로 이동
 
             }
         }
@@ -73,12 +73,17 @@ class MainActivity : AppCompatActivity() {
                     UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
                 } else if (token != null) {
                     Log.i(TAG, "카카오톡으로 로그인 성공 ${token.accessToken}")
-                    gotoHome()//Home화면으로 이동
+                    gotoRegister()//회원정보입력화면으로 이동
                 }
             }
         } else {
             UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
         }
+    }
+
+    private fun gotoRegister() {
+        startActivity(Intent(this, RegisterActivity::class.java))
+        finish() // 현재 액티비티 종료.. HOME화면으로
     }
 
     private fun gotoHome() {
