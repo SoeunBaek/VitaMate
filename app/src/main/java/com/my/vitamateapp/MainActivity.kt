@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun gotoRegister() {
         startActivity(Intent(this, RegisterActivity::class.java))
-        finish() // 현재 액티비티 종료.. HOME화면으로
+        finish() // 현재 액티비티 종료.. 회원가입 정보 입력 화면으로
     }
 
     private fun gotoHome() {

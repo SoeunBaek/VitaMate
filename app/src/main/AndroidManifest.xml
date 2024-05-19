@@ -17,6 +17,9 @@
     android:theme="@style/Theme.VitaMateApp"
     tools:targetApi="31">
     <activity
+      android:name=".RegistrationCompleteActivity"
+      android:exported="false" />
+    <activity
       android:name=".NoInBodyRecordActivity"
       android:exported="false" />
     <activity
