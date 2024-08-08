@@ -8,13 +8,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.kakao.sdk.user.UserApiClient
 import com.my.vitamateapp.databinding.ActivityHomeBinding
+import com.my.vitamateapp.foodRecord.BreakfastRecord
+import com.my.vitamateapp.registerPage.MainActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_home
-        )
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
+
+
+        // 아침 식단 기록 페이지로 이동
+        binding.breakfastRecord.setOnClickListener {
+            val intent = Intent(this, BreakfastRecord::class.java)
+            startActivity(intent)
+        }
 
         //로그아웃 버튼 클릭 시 로그아웃
         binding.kakaoLogoutButton.setOnClickListener{
@@ -56,5 +64,4 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
-
 }

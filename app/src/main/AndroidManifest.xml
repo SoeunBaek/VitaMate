@@ -17,25 +17,34 @@
     android:theme="@style/Theme.VitaMateApp"
     tools:targetApi="31">
     <activity
-      android:name=".RegistrationCompleteActivity"
+      android:name=".registerPage.RegistrationCompleteActivity"
       android:exported="false" />
     <activity
-      android:name=".NoInBodyRecordActivity"
+      android:name=".foodRecord.BreakfastRecord"
       android:exported="false" />
     <activity
-      android:name=".InBodyRecordActivity"
+      android:name=".nav_fragment"
       android:exported="false" />
     <activity
-      android:name=".InBodyCheckActivity"
+      android:name=".foodRecord.RegistrationCompleteActivity"
       android:exported="false" />
     <activity
-      android:name=".RegisterActivity"
+      android:name=".registerPage.NoInBodyRecordActivity"
+      android:exported="false" />
+    <activity
+      android:name=".registerPage.InBodyRecordActivity"
+      android:exported="false" />
+    <activity
+      android:name=".registerPage.InBodyCheckActivity"
+      android:exported="false" />
+    <activity
+      android:name=".registerPage.RegisterActivity"
       android:exported="false" />
     <activity
       android:name=".HomeActivity"
       android:exported="false" /> <!-- MainActivity가 앱의 런처 엑티비티이며 android:exported="true"로 설정 -->
     <activity
-      android:name=".MainActivity"
+      android:name=".registerPage.MainActivity"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

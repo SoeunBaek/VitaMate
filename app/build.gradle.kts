@@ -37,6 +37,12 @@ android {
     dataBinding{
         enable = true
     }
+
+    viewBinding {
+        enable = true
+    }
+
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
@@ -48,6 +54,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.identity.credential.android)
     implementation(libs.androidx.preference)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -58,4 +66,13 @@ dependencies {
     implementation ("com.kakao.sdk:v2-friend:2.20.1") // 피커 API 모듈
     implementation ("com.kakao.sdk:v2-navi:2.20.1") // 카카오내비 API 모듈
     implementation ("com.kakao.sdk:v2-cert:2.20.1")// 카카오톡 인증 서비스 API 모듈
+
+
+    implementation ("androidx.core:core-ktx:1.12.0")
+    implementation ("androidx.appcompat:appcompat:1.7.0")
+    implementation ("com.google.android.material:material:1.11.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")//Recycler 캘린더 뷰
+
+
 }
