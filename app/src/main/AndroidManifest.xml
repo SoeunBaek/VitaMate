@@ -20,13 +20,7 @@
       android:name=".registerPage.RegistrationCompleteActivity"
       android:exported="false" />
     <activity
-      android:name=".foodRecord.BreakfastRecord"
-      android:exported="false" />
-    <activity
-      android:name=".nav_fragment"
-      android:exported="false" />
-    <activity
-      android:name=".foodRecord.RegistrationCompleteActivity"
+      android:name=".foodRecord.FoodRecord"
       android:exported="false" />
     <activity
       android:name=".registerPage.NoInBodyRecordActivity"
