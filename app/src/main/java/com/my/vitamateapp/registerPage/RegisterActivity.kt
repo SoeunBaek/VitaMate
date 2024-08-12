@@ -100,6 +100,8 @@ class RegisterActivity : AppCompatActivity() {
 
         // 다음 버튼 클릭 리스너 설정
         binding.nextBtn.setOnClickListener {
+            // 데이터 저장하기
+            saveUserData()
             startActivity(Intent(this, InBodyCheckActivity::class.java))
             finish() // 현재 액티비티 종료
         }
@@ -149,7 +151,6 @@ class RegisterActivity : AppCompatActivity() {
         return isYearValid && isMonthValid && isDayValid
     }
 
-
     // 주어진 월과 연도에 따른 일 수를 반환
     private fun daysInMonth(month: Int, year: Int): Int {
         return when (month) {
@@ -173,17 +174,13 @@ class RegisterActivity : AppCompatActivity() {
         isDateValid = validateDate(year, month, day)
 
         // 모든 입력값 유효성 검사 후 다음 버튼 활성화
-        if (isNicknameValid && isDuplicateChecked && (isMaleSelected || isFemaleSelected) && isDateValid) {
-            // 모든 값이 유효할 경우 다음 단계로 진행
-            binding.nextBtn.isEnabled = true
-        } else {
-            // 유효하지 않은 값이 있을 경우 토스트 메시지 표시
-            if (!isDateValid) {
-                Toast.makeText(this, "정확한 생년월일을 입력하세요.", Toast.LENGTH_SHORT).show()
-            }
-            // 유효성 검증 후 키패드 내려주기
-            hideKeyboard()
+        if (!isDateValid) {
+            Toast.makeText(this, "정확한 생년월일을 입력하세요.", Toast.LENGTH_SHORT).show()
         }
+        updateNextButtonState()
+
+        // 유효성 검증 후 키패드 내려주기
+        hideKeyboard()
     }
 
     private fun updateNextButtonState() {
@@ -199,7 +196,32 @@ class RegisterActivity : AppCompatActivity() {
             imm.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }
+
+    // 사용자 입력 데이터 저장 함수
+    private fun saveUserData() {
+        val sharedPreferences = getSharedPreferences("user_info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val nickname = binding.nicknameEditText.text.toString()
+        val year = binding.yearEditText.text.toString()
+        val month = binding.monthEditText.text.toString()
+        val day = binding.dayEditText.text.toString()
+        val gender = if (isMaleSelected) "male" else "female"
+
+        editor.putString("nickname", nickname)
+        editor.putString("birthdate", "$year-$month-$day")
+        editor.putString("gender", gender)
+        editor.apply() // 변경 사항 저장
+
+        // 저장된 데이터 확인 (문자열이 맞는지 확인)
+        val savedNickname = sharedPreferences.getString("nickname", "없음")
+        val savedBirthdate = sharedPreferences.getString("birthdate", "없음")
+        val savedGender = sharedPreferences.getString("gender", "없음")
+        Toast.makeText(this, "닉네임: $savedNickname, 생년월일: $savedBirthdate, 성별: $savedGender", Toast.LENGTH_SHORT).show()
+    }
 }
+
+
 
 
 
