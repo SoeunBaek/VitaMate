@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.kakao.sdk.user.UserApiClient
 import com.my.vitamateapp.databinding.ActivityHomeBinding
-import com.my.vitamateapp.intakeFragment.IntakeFragment
 import com.my.vitamateapp.registerPage.MainActivity
 
 class HomeActivity : AppCompatActivity() {
@@ -18,12 +17,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
 
-        // Intake 프래그먼트를 동적으로 추가
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.intake_fragment_container, IntakeFragment())
-                .commit()
-        }
 
         // 로그아웃 버튼 클릭 시 로그아웃
         binding.kakaoLogoutButton.setOnClickListener {
