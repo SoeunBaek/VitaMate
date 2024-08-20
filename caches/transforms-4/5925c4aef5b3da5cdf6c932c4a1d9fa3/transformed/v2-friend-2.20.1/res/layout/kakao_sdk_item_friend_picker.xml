@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <com.kakao.sdk.friend.view.SquircleImageView
+        android:id="@+id/profile_iv"
+        android:layout_width="?attr/list_item_squirecle_size"
+        android:layout_height="?attr/list_item_squirecle_size"
+        android:layout_marginVertical="?attr/list_item_squirecle_margin_vertical"
+        android:layout_marginStart="@dimen/list_item_squirecle_margin_start"
+        android:background="@color/transparent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="@dimen/list_item_squirecle_size"
+        tools:layout_marginVertical="@dimen/list_item_squirecle_margin_vertical"
+        tools:layout_width="@dimen/list_item_squirecle_size"
+        tools:src="@drawable/kakao_sdk_img_picker_01_light" />
+
+    <TextView
+        android:id="@+id/nickname_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/list_item_nickname_margin_start"
+        android:layout_marginTop="@dimen/list_item_nickname_margin_top"
+        android:layout_marginEnd="@dimen/list_item_nickname_margin_end"
+        android:layout_marginBottom="@dimen/list_item_nickname_margin_bottom"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="?attr/gray900s"
+        android:textSize="?attr/list_item_nickname_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/check_box"
+        app:layout_constraintStart_toEndOf="@+id/profile_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginStart="@dimen/list_item_nickname_margin_start"
+        tools:text="라이언"
+        tools:textColor="@color/daynight_gray900s"
+        tools:textSize="@dimen/list_item_nickname_text_size" />
+
+    <TextView
+        android:id="@+id/reject_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/list_item_reject_text_margin_start"
+        android:layout_marginTop="?attr/list_item_reject_text_margin_top"
+        android:layout_marginBottom="?attr/list_item_reject_text_margin_bottom"
+        android:layout_marginEnd="@dimen/list_item_nickname_margin_end"
+        android:text="@string/reject_message"
+        android:textColor="?attr/gray900s"
+        android:textSize="@dimen/list_item_reject_text_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/check_box"
+        app:layout_constraintStart_toEndOf="@+id/profile_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginBottom="@dimen/list_item_reject_text_margin_bottom"
+        tools:layout_marginStart="@dimen/list_item_reject_text_margin_start"
+        tools:layout_marginTop="@dimen/list_item_reject_text_margin_top"
+        tools:textColor="@color/daynight_gray900s"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/check_box"
+        android:layout_width="?attr/list_item_checkbox_size"
+        android:layout_height="?attr/list_item_checkbox_size"
+        android:layout_marginVertical="?attr/list_item_checkbox_margin_vertical"
+        android:layout_marginEnd="@dimen/list_item_checkbox_margin_end"
+        android:background="@color/transparent"
+        android:button="@drawable/kakao_sdk_daynight_checkbox"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:button="@drawable/kakao_sdk_btn_select_on_check"
+        tools:layout_marginVertical="@dimen/list_item_checkbox_margin_vertical" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

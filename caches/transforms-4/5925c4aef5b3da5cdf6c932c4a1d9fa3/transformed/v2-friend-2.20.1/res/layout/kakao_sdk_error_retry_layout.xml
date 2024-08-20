@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/error_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/retry_message"
+            android:textColor="?attr/gray600s"
+            tools:textColor="@color/daynight_gray600s"
+            android:textSize="@dimen/error_retry_view_text_size" />
+
+        <ImageButton
+            android:id="@+id/refresh_button"
+            android:layout_width="@dimen/error_retry_view_button_size"
+            android:layout_height="@dimen/error_retry_view_button_size"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/error_retry_view_button_margin_top"
+            android:background="@drawable/kakao_sdk_round_button"
+            android:src="@drawable/kakao_sdk_ico_refresh"
+            app:tint="?attr/gray900s" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

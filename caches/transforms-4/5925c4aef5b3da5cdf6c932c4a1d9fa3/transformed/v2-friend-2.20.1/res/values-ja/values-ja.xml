@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="popup_side_indexer" ns1:ignore="InconsistentArrays">
+        <item>あ</item>
+        <item>か</item>
+        <item>た</item>
+        <item>な</item>
+        <item>ま</item>
+        <item>や</item>
+        <item>わ</item>
+        <item>ㄱ</item>
+        <item>ㅂ</item>
+        <item>ㅇ</item>
+        <item>A</item>
+        <item>F</item>
+        <item>O</item>
+        <item>Z</item>
+        <item>#</item>
+    </string-array>
+    <string-array name="popup_side_indexer_landscape" ns1:ignore="InconsistentArrays">
+        <item>あ</item>
+        <item>か</item>
+        <item>た</item>
+        <item>ま</item>
+        <item>わ</item>
+        <item>#</item>
+    </string-array>
+    <string-array name="side_indexer" ns1:ignore="InconsistentArrays">
+        <item>あ</item>
+        <item>か</item>
+        <item>さ</item>
+        <item>た</item>
+        <item>な</item>
+        <item>は</item>
+        <item>ま</item>
+        <item>や</item>
+        <item>ら</item>
+        <item>わ</item>
+        <item>ㄱ</item>
+        <item>ㅂ</item>
+        <item>ㅇ</item>
+        <item>ㅊ</item>
+        <item>A</item>
+        <item>F</item>
+        <item>O</item>
+        <item>Z</item>
+        <item>#</item>
+    </string-array>
+    <string-array name="side_indexer_landscape" ns1:ignore="InconsistentArrays">
+        <item>あ</item>
+        <item>か</item>
+        <item>さ</item>
+        <item>た</item>
+        <item>は</item>
+        <item>ま</item>
+        <item>ら</item>
+        <item>わ</item>
+        <item>#</item>
+    </string-array>
+    <string name="accessibility_back">戻る</string>
+    <string name="accessibility_close">閉じる</string>
+    <string name="accessibility_delete">削除</string>
+    <string name="accessibility_member_count_unit">%d人</string>
+    <string name="accessibility_open_chat">オープントーク</string>
+    <string name="accessibility_unselect">選択解除</string>
+    <string name="chat">トーク</string>
+    <string name="deselect_all">すべて選択解除</string>
+    <string name="empty_chat_message">選択できるトークルームがありません。</string>
+    <string name="empty_friend_message">選択するカカともがいません。</string>
+    <string name="empty_search_result">検索結果が見つかりませんでした</string>
+    <string name="favorite">お気に入り</string>
+    <string name="friend">カカとも</string>
+    <string name="kakao_sdk_friend_app_name">partner-friend</string>
+    <string name="max_pickable_count_message">カカともは一度には最大%d枚まで選択できます。</string>
+    <string name="min_pickable_count_message">%d枚以上の相手を選択してください。</string>
+    <string name="my_profile">プロフィール</string>
+    <string name="next">次へ</string>
+    <string name="not_talk_friend">カカともではありません</string>
+    <string name="ok">確認</string>
+    <string name="registered">加入者</string>
+    <string name="reject_message">受信拒否</string>
+    <string name="retry_message">カカともリストを読み込めませんでした。\nしばらくしてからもう一度お試しください。</string>
+    <string name="search_bar_hint">名前、ニックネーム検索</string>
+    <string name="search_chat_hint">トークルーム名検索</string>
+    <string name="search_result">検索結果</string>
+    <string name="select_all">すべて選択</string>
+    <string name="select_chat">トークルーム選択</string>
+    <string name="select_friend">カカとも選択</string>
+    <string name="unexpected_error_message">エラーが発生しました。\nしばらくしてから、\nもう一度お試しください。</string>
+    <string name="unregistered">未加入者</string>
+</resources>
