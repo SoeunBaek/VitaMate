@@ -1,0 +1,13 @@
+com.kakao.sdk.navi.Constants
+com.kakao.sdk.navi.NaviClient
+com.kakao.sdk.navi.NaviClient$Companion
+com.kakao.sdk.navi.NaviClient$Companion$instance$2
+com.kakao.sdk.navi.model.CoordType
+com.kakao.sdk.navi.model.KakaoNaviParams
+com.kakao.sdk.navi.model.Location
+com.kakao.sdk.navi.model.Location$Creator
+com.kakao.sdk.navi.model.NaviOption
+com.kakao.sdk.navi.model.NaviOption$Creator
+com.kakao.sdk.navi.model.RpOption
+com.kakao.sdk.navi.model.VehicleType
+com.kakao.sdk.v2.navi.BuildConfig

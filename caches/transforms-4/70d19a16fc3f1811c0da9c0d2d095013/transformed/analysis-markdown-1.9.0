@@ -1,0 +1,7 @@
+org.jetbrains.dokka.analysis.markdown.jb.MarkdownApiKt
+org.jetbrains.dokka.analysis.markdown.jb.MarkdownParser
+org.jetbrains.dokka.analysis.markdown.jb.MarkdownParser$Companion
+org.jetbrains.dokka.analysis.markdown.jb.ParseUtilsKt
+org.jetbrains.dokka.analysis.markdown.jb.ParseUtilsKt$parseHtmlEncodedWithNormalisedSpaces$1
+org.jetbrains.dokka.analysis.markdown.jb.Parser
+org.jetbrains.dokka.analysis.markdown.jb.factories.DocTagsFromIElementFactory

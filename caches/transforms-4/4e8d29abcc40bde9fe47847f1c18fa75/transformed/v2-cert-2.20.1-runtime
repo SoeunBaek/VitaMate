@@ -1,0 +1,16 @@
+com.kakao.sdk.cert.CertApiClient
+com.kakao.sdk.cert.CertApiClient$Companion
+com.kakao.sdk.cert.CertApiClient$a
+com.kakao.sdk.cert.CertApiClient$b
+com.kakao.sdk.cert.CertApiClient$c
+com.kakao.sdk.cert.a
+com.kakao.sdk.cert.a.a
+com.kakao.sdk.cert.a.b
+com.kakao.sdk.cert.a.b$a
+com.kakao.sdk.cert.a.b$b
+com.kakao.sdk.cert.a.c
+com.kakao.sdk.cert.a.d
+com.kakao.sdk.cert.b
+com.kakao.sdk.cert.c
+com.kakao.sdk.cert.d
+com.kakao.sdk.cert.model.SessionInfo
